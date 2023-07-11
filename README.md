@@ -1,3 +1,1 @@
-Pomodoro Cheerleader!
-
-This chrome extension modifies the basic pomodoro technique by using active recall strategies and elaborative rehearsal techniques. These are research-backed concepts that improve comprehension and retention. At the end of each cycle, the program prompts users to input conceptual connections and weakpoints. 
+This chrome extension combines active recall strategies, elaborative rehearsal, and the basic pomodoro technique. These are research-backed concepts that improve comprehension and retention. At the end of each cycle, the program prompts users to input conceptual connections and weakpoints. This engages the user to recall what they've learned by thinking about the meaning of the information they're learning and connecting it to other information that they've already learned. 

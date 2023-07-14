@@ -4,7 +4,7 @@ import PlayButton from './playButton';
 import PauseButton from './pauseButton';
 
 
-const red = '#f54e4e';
+const red = '#f54e4e'; 
 const green = '#4aec8c'
 
 function Timer() {
@@ -23,7 +23,7 @@ function Timer() {
             </div>
             <div style={{marginTop: '20px'}}>
 
-                
+
             </div>
         </div>
 

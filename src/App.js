@@ -1,5 +1,5 @@
 import './App.css';
-import Timer from "./Timer";
+import Timer from "./timer";
 import Settings from "./Settings";
 import {useState} from "react";
 import SettingsContext from "./SettingsContext";

@@ -7,8 +7,14 @@ import SettingsContext from "./SettingsContext";
 function App() {
 
   const [showSettings, setShowSettings] = useState(false);
-  const [workMinutes, setWorkMinutes] = useState(45);
-  const [breakMinutes, setBreakMinutes] = useState(15);
+  const [workMinutes, setWorkMinutes] = useState(1);
+  const [breakMinutes, setBreakMinutes] = useState(5);
+  const [timerFinished, setTimerFinished] = useState(false); // New state to track timer completion
+
+  const handleTimerFinish = () => {
+    setShowSettings(true); // Show the settings page
+    setTimerFinished(true); // Set timerFinished to true
+  };
 
   return (
     <main>
@@ -19,8 +25,9 @@ function App() {
         breakMinutes,
         setWorkMinutes,
         setBreakMinutes,
+        timerFinished,
       }}>
-        {showSettings ? <Settings /> : <Timer />}
+        {showSettings ? (<Settings />) : (<Timer onTimerFinish = {handleTimerFinish} />)}
       </SettingsContext.Provider>
     </main>
   );

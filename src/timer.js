@@ -6,10 +6,8 @@ import SettingsButton from "./SettingsButton";
 import {useContext, useState, useEffect, useRef} from "react";
 import SettingsContext from "./SettingsContext";
 
-const red = '#f54e4e';
-const green = '#4aec8c';
 
-function Timer() {
+function Timer({onTimerFinish}) {
   const settingsInfo = useContext(SettingsContext);
 
   const [isPaused, setIsPaused] = useState(true);
@@ -36,10 +34,14 @@ function Timer() {
 
       setSecondsLeft(nextSeconds);
       secondsLeftRef.current = nextSeconds;
+
+
     }
 
     secondsLeftRef.current = settingsInfo.workMinutes * 60;
     setSecondsLeft(secondsLeftRef.current);
+
+    
 
     const interval = setInterval(() => {
       if (isPausedRef.current) {
@@ -53,7 +55,7 @@ function Timer() {
     },1000);
 
     return () => clearInterval(interval);
-  }, [settingsInfo]);
+  }, [settingsInfo, onTimerFinish]);
 
   const totalSeconds = mode === 'work'
     ? settingsInfo.workMinutes * 60
@@ -71,8 +73,8 @@ function Timer() {
         text={minutes + ':' + seconds}
         styles={buildStyles({
         textColor:'#fff',
-        pathColor:mode === 'work' ? red : green,
-        tailColor:'rgba(255,255,255,.2)',
+        pathColor:mode === 'work' ? '#c69572' : '#c69572',
+        tailColor:'#361411',
       })} />
       <div style={{marginTop:'20px'}}>
         {isPaused

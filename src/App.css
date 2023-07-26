@@ -1,10 +1,10 @@
 :root{
-  --red: #f54e4e;
-  --green: #4aec8c;
+  --red: #c69572;
+  --green: #c69572;
 }
 
 body{
-  background-color: #30384b;
+  background-color: #4f2727;
   color: #eee;
 }
 main{

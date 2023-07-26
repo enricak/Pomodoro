@@ -35,7 +35,9 @@ function Timer({onTimerFinish}) {
       setSecondsLeft(nextSeconds);
       secondsLeftRef.current = nextSeconds;
 
-
+      if (nextMode === 'work' && nextSeconds === 0) {
+        onTimerFinish(); // Call onTimerFinish when work minutes end
+      }
     }
 
     secondsLeftRef.current = settingsInfo.workMinutes * 60;

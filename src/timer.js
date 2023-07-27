@@ -5,10 +5,12 @@ import PauseButton from "./PauseButton";
 import SettingsButton from "./SettingsButton";
 import {useContext, useState, useEffect, useRef} from "react";
 import SettingsContext from "./SettingsContext";
+import reviewContext from './reviewContext';
 
 
 function Timer({onTimerFinish}) {
   const settingsInfo = useContext(SettingsContext);
+  const reviewInfo = useContext(reviewContext);
 
   const [isPaused, setIsPaused] = useState(true);
   const [mode, setMode] = useState('work'); // work/break/null
